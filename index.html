@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faith Computers - Redesigned</title>
+  <!-- Bootstrap CSS for responsive layout -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Color Palette */
+    :root {
+      --primary: #0d47a1; /* deep blue */
+      --secondary: #1976d2; /* lighter blue */
+      --accent: #ffca28; /* amber accent */
+      --background: #f4f6f8; /* light grey background */
+      --text: #212121; /* dark text */
+      --light: #ffffff; /* white */
+    }
+
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+    }
+    
+    /* Navigation */
+    .sticky-header {
+      background-color: var(--light);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: var(--primary);
+    }
+    .nav-link {
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    /* Hero Section */
+    .hero {
+      background-image: url('hero.avif');
+      background-position: center;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--light);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+    .cta-button {
+      background-color: var(--accent);
+      border: none;
+      padding: 12px 25px;
+      color: var(--text);
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .cta-button:hover {
+      background-color: var(--secondary);
+      color: var(--light);
+    }
+    
+    /* Section Headers */
+    .section-header {
+      margin-bottom: 40px;
+      text-align: center;
+      color: var(--primary);
+    }
+    
+    /* Service Cards */
+    .service-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    
+    /* Testimonials */
+    .testimonial {
+      background-color: var(--light);
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    
+    /* Contact Info Box */
+    .contact-info {
+      background-color: var(--light);
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-header navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="faithcomputers_logo.avif"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container text-center">
+      <h1>Welcome to Faith Computers</h1>
+      <p>Your trusted partner for computer repair and advanced tech solutions</p>
+      <a href="#services" class="cta-button">Explore Services</a>
+    </div>
+  </header>  
+
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <h2 class="section-header">Our Services</h2>
+      <div class="row justify-content-center">
+        <!-- Service Card 1: Laptop Repair -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card service-card h-100">
+            <img src="laptop_repair.avif" class="card-img-top" alt="Laptop Repair">
+            <div class="card-body">
+              <h5 class="card-title">Laptop Repair</h5>
+              <p class="card-text">Expert laptop repair services ensuring quick diagnosis and reliable repairs to get you back up and running.</p>
+              <a href="#contact" class="btn btn-primary w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 2: Computer Repair -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card service-card h-100">
+            <img src="computer_repair.avif" class="card-img-top" alt="Computer Repair">
+            <div class="card-body">
+              <h5 class="card-title">Computer Repair</h5>
+              <p class="card-text">Comprehensive repair services for desktops and all-in-one systems with professional and efficient support.</p>
+              <a href="#contact" class="btn btn-primary w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 3: Data Recovery -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card service-card h-100">
+            <img src="data_recovery.avif" class="card-img-top" alt="Data Recovery">
+            <div class="card-body">
+              <h5 class="card-title">Data Recovery</h5>
+              <p class="card-text">Advanced data recovery solutions to retrieve lost files and restore your essential data safely.</p>
+              <a href="#contact" class="btn btn-primary w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 4: Apple Repair -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card service-card h-100">
+            <img src="apple_repair.avif" class="card-img-top" alt="Apple Repair">
+            <div class="card-body">
+              <h5 class="card-title">Apple Repair</h5>
+              <p class="card-text">Specialized repair services for all Apple devices, ensuring quality repairs with genuine parts.</p>
+              <a href="#contact" class="btn btn-primary w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 5: Printer Repair -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card service-card h-100">
+            <img src="printer_repair.avif" class="card-img-top" alt="Printer Repair">
+            <div class="card-body">
+              <h5 class="card-title">Printer Repair</h5>
+              <p class="card-text">Efficient printer repair services for all major brands, ensuring your printing solutions remain operational.</p>
+              <a href="#contact" class="btn btn-primary w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 6: Old Laptop Sale Purchase -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card service-card h-100">
+            <img src="old_laptop_sell_purchase.avif" class="card-img-top" alt="Old Laptop Sale Purchase">
+            <div class="card-body">
+              <h5 class="card-title">Old Laptop Sell/Purchase</h5>
+              <p class="card-text">Competitive pricing and expert evaluation for buying and selling pre-owned laptops and computers.</p>
+              <a href="#contact" class="btn btn-primary w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 7: Website Development -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card service-card h-100">
+            <img src="website_development.avif" class="card-img-top" alt="Website Development">
+            <div class="card-body">
+              <h5 class="card-title">Website Development</h5>
+              <p class="card-text">Custom website development services designed to build your brand's online presence with responsive designs.</p>
+              <a href="#contact" class="btn btn-primary w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 8: Laptop on Rent -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card service-card h-100">
+            <img src="laptop_on_rent.avif" class="card-img-top" alt="Laptop on Rent">
+            <div class="card-body">
+              <h5 class="card-title">Laptop on Rent</h5>
+              <p class="card-text">Flexible rental options for laptops, catering to personal, business, and short-term needs.</p>
+              <a href="#contact" class="btn btn-primary w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 9: Virus Removal Service -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card service-card h-100">
+            <img src="virus_removal_service.avif" class="card-img-top" alt="Virus Removal Service">
+            <div class="card-body">
+              <h5 class="card-title">Virus Removal Service</h5>
+              <p class="card-text">Comprehensive virus and malware removal solutions to protect your systems and data.</p>
+              <a href="#contact" class="btn btn-primary w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service Card 10: Software Installation -->
+        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+          <div class="card service-card h-100">
+            <img src="software_installation.avif" class="card-img-top" alt="Software Installation">
+            <div class="card-body">
+              <h5 class="card-title">Software Installation</h5>
+              <p class="card-text">Professional software installation and configuration services ensuring optimal performance.</p>
+              <a href="#contact" class="btn btn-primary w-100">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-4 bg-white">
+  <div class="container text-center">
+    <h2 class="section-header">Brands We Work With</h2>
+    <img src="image.png" alt="Supported Brands" class="img-fluid" style="max-width: 100%; height: auto;">
+  </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-header">About Us</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://placehold.co/500x350?text=About+Us" class="img-fluid rounded" alt="About Faith Computers">
+        </div>
+        <div class="col-md-6">
+          <p>Faith Computers is one of the most trusted names in personal computer repairing and servicing sector in Delhi/NCR. Our team of highly qualified professionals is committed to deliver unparalleled service in each and every assignment. We are well trained to service any brand of laptops, desktops and printers. And believe me, for all these high quality of support and services, you don't have to pay astronomical prices ... just pay us standard rate. Because our sincere goal is to provide the best quality services possible without the bloated billing statements you'll get from the other big names. We also deal in second hand laptop and personal computer purchase and sale at flat rates. Please contact us for more details, and we'll be happy to help you.</p>          
+          <a href="#contact" class="cta-button">Contact Us Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h2 class="section-header">What Our Clients Say</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonial">
+            <p>"Faith Computers saved my business with their prompt and professional repair services. I couldn't be happier!"</p>
+            <strong>- Alex M.</strong>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial">
+            <p>"Their laptop rental service is a game-changer for startups. Affordable and reliable."</p>
+            <strong>- Priya S.</strong>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial">
+            <p>"Exceptional data recovery. I recovered vital work files with zero hassle. Highly recommend their service."</p>
+            <strong>- John D.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-header">Get in Touch</h2>
+      <div class="row">
+        <!-- Contact Form -->
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="Subject">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Write your message here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary cta-button">Send Message</button>
+          </form>
+        </div>
+        <!-- Contact Info -->
+        <div class="col-md-6">
+          <div class="contact-info">
+            <h5>Store Address</h5>
+            <p>404 Skylark Building 60,<br>Nehr
+u Place,<br>New Delhi - 110019, Delhi</p>
+            <h5>Email</h5>
+            <p><a href="mailto:info@faithcomputers.co.in">info@faithcomputers.co.in</a></p>
+            <h5>Phone</h5>
+            <p>Tel: 011-41326235<br>Mob: 9899739639</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Google Map Section -->
+<section id="location" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-header mb-4">Visit Us</h2>
+    <div class="">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.6874763242163!2d77.25029777522614!3d28.549111975710353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c8df2f49d1%3A0x437756dcf244fc3e!2sFaith%20Computers!5e0!3m2!1sen!2sin!4v1743770347734!5m2!1sen!2sin"
+        width="100%" height="450" style="border:0;" allowfullscreen=""
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">404 Skylark Building 60, Nehru Place, New Delhi - 110019, Delhi</p>
+      <p class="mb-1">Email: <a href="mailto:info@faithcomputers.co.in" class="text-light">info@faithcomputers.co.in</a> | Tel: 011-41326235 | Mob: 9899739639</p>
+      <p class="mb-0">&copy; 2025 Faith Computers. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
